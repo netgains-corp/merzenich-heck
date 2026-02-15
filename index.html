@@ -71,8 +71,8 @@
 </head>
 <body class="bg-black text-white">
 
-    <!-- NAVIGATION -->
-    <header class="fixed w-full top-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+    <!-- NAVIGATION - Updated to be completely transparent -->
+    <header class="fixed w-full top-0 z-50 bg-transparent transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -116,9 +116,9 @@
         
         <!-- YouTube Background Video Wrapper -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-            <!-- Added &vq=hd1080 to force higher resolution preference -->
+            <!-- Removed opacity-60 to make it fully colorful -->
             <iframe 
-                class="absolute top-1/2 left-1/2 w-[160%] h-[160%] -translate-x-1/2 -translate-y-1/2 opacity-60"
+                class="absolute top-1/2 left-1/2 w-[160%] h-[160%] -translate-x-1/2 -translate-y-1/2 opacity-100"
                 src="https://www.youtube.com/embed/KeXn0glf-aU?autoplay=1&mute=1&controls=0&loop=1&playlist=KeXn0glf-aU&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&vq=hd1080" 
                 title="YouTube background" 
                 frameborder="0" 
@@ -127,8 +127,8 @@
             ></iframe>
         </div>
         
-        <!-- Overlay -->
-        <div class="absolute inset-0 video-overlay z-1"></div>
+        <!-- Overlay - Reduced opacity significantly to let colors shine through -->
+        <div class="absolute inset-0 bg-black/30 z-1"></div>
 
         <!-- Content -->
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
