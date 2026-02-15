@@ -55,14 +55,14 @@
 
         /* Video Overlay */
         .video-overlay {
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
         }
     </style>
 </head>
 <body class="bg-black text-white">
 
     <!-- NAVIGATION -->
-    <header class="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+    <header class="fixed w-full top-0 z-50 bg-black/40 backdrop-blur-sm border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -105,9 +105,10 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Video (Original Source via proxy/direct link simulation) -->
+        <!-- Background Video -->
         <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-            <source src="https://video.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/b31168e3-b487-4f00-b2db-78ea0c7986aa/mp4/1080p.mp4" type="video/mp4">
+            <!-- New stock video: City traffic at night (Timelapse) - Atmospheric and reliable -->
+            <source src="https://videos.pexels.com/video-files/855564/855564-hd_1920_1080_25fps.mp4" type="video/mp4">
             <!-- Fallback Image if video fails -->
             <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/5df98d02-668c-48cf-8669-576455aa136d/Bens+Seite.png" class="w-full h-full object-cover opacity-50">
         </video>
