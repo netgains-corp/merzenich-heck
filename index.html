@@ -105,16 +105,22 @@
 
     <!-- HERO SECTION -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
-            <!-- New stock video: City traffic at night (Timelapse) - Atmospheric and reliable -->
-            <source src="https://videos.pexels.com/video-files/855564/855564-hd_1920_1080_25fps.mp4" type="video/mp4">
-            <!-- Fallback Image if video fails -->
-            <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/5df98d02-668c-48cf-8669-576455aa136d/Bens+Seite.png" class="w-full h-full object-cover opacity-50">
-        </video>
+        
+        <!-- YouTube Background Video Wrapper -->
+        <!-- pointer-events-none verhindert, dass man das Video anklicken/stoppen kann -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <iframe 
+                class="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2 opacity-80"
+                src="https://www.youtube.com/embed/KeXn0glf-aU?autoplay=1&mute=1&controls=0&loop=1&playlist=KeXn0glf-aU&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
+                title="YouTube background" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+        </div>
         
         <!-- Overlay -->
-        <div class="absolute inset-0 video-overlay"></div>
+        <div class="absolute inset-0 video-overlay z-1"></div>
 
         <!-- Content -->
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
