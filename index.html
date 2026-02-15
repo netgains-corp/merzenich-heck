@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{ungeskriptet by Ben Berndt} - der ehrliche Podcast ohne Skript</title>
+    <title>Merzenich & Heck - Finanzielle Intelligenz & Strategie</title>
     
     <!-- Tailwind CSS für schnelles Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,7 @@
     <!-- Google Fonts (Inter kommt dem Original sehr nahe) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
     <!-- FontAwesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,7 +19,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000;
+            background-color: #050505;
             color: white;
             overflow-x: hidden;
         }
@@ -33,7 +33,7 @@
         
         .marquee-content {
             display: inline-block;
-            animation: marquee 20s linear infinite;
+            animation: marquee 35s linear infinite;
         }
 
         @keyframes marquee {
@@ -46,49 +46,57 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1a1a1a;
+            background: #020617; /* Slate 950 */
         }
         ::-webkit-scrollbar-thumb {
-            background: #444;
+            background: #1e3a8a; /* Blue 900 */
             border-radius: 4px;
         }
 
         /* Video Overlay */
         .video-overlay {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.65);
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Royal Blue Gradient for bottom section */
+        .royal-gradient {
+            background: linear-gradient(to bottom, #020410, #0f172a);
         }
     </style>
 </head>
 <body class="bg-black text-white">
 
     <!-- NAVIGATION -->
-    <header class="fixed w-full top-0 z-50 bg-black/40 backdrop-blur-sm border-b border-white/10 transition-all duration-300">
+    <header class="fixed w-full top-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/5 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold tracking-tighter hover:text-gray-300 transition">
-                        {ungeskriptet}
+                    <a href="#" class="text-xl md:text-2xl font-bold tracking-tighter hover:text-blue-400 transition uppercase">
+                        Merzenich <span class="text-blue-600">&</span> Heck
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Home</a>
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Karriere</a>
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Ben</a>
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Gast werden</a>
-                    <a href="#" class="text-sm font-medium hover:text-gray-300 transition">Clips Challenge</a>
+                    <a href="#home" class="text-sm font-medium hover:text-blue-400 transition">Home</a>
+                    <a href="#florian" class="text-sm font-medium hover:text-blue-400 transition">Florian Merzenich</a>
+                    <a href="#falk" class="text-sm font-medium hover:text-blue-400 transition">Dr. Falk Heck</a>
+                    <a href="#presse" class="text-sm font-medium hover:text-blue-400 transition">Fachartikel & Presse</a>
                 </nav>
 
                 <!-- Action Button & Socials -->
                 <div class="hidden md:flex items-center space-x-6">
                     <div class="flex space-x-4 text-gray-400">
-                        <a href="#" class="hover:text-white"><i class="fab fa-youtube text-lg"></i></a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-spotify text-lg"></i></a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin text-lg"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram text-lg"></i></a>
                     </div>
-                    <a href="#" class="border border-white px-5 py-2 text-sm font-medium hover:bg-white hover:text-black transition duration-300">
+                    <a href="#kontakt" class="border border-white/30 px-5 py-2 text-sm font-medium hover:bg-white hover:text-black transition duration-300 rounded-sm">
                         Kontakt
                     </a>
                 </div>
@@ -104,13 +112,12 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         
         <!-- YouTube Background Video Wrapper -->
-        <!-- pointer-events-none verhindert, dass man das Video anklicken/stoppen kann -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
             <iframe 
-                class="absolute top-1/2 left-1/2 w-[160%] h-[160%] -translate-x-1/2 -translate-y-1/2 opacity-80"
+                class="absolute top-1/2 left-1/2 w-[160%] h-[160%] -translate-x-1/2 -translate-y-1/2 opacity-60"
                 src="https://www.youtube.com/embed/KeXn0glf-aU?autoplay=1&mute=1&controls=0&loop=1&playlist=KeXn0glf-aU&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
                 title="YouTube background" 
                 frameborder="0" 
@@ -123,170 +130,264 @@
         <div class="absolute inset-0 video-overlay z-1"></div>
 
         <!-- Content -->
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                Gespräche, die dich<br>weiter bringen.
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <div class="inline-block mb-4 px-3 py-1 border border-blue-500/50 rounded-full bg-blue-900/20 backdrop-blur-sm text-blue-300 text-sm tracking-wide uppercase">
+                Exzellenz in Strategie & Vermögen
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight text-white drop-shadow-lg">
+                Vermögen ist <br>Kopfsache.
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                Bei <span class="font-bold">{ungeskriptet}</span> spreche ich mit außergewöhnlichen Menschen. Alles ist roh, ungeschnitten und unzensiert. So wie Menschen wirklich sind.
+            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-8 drop-shadow-md">
+                <span class="font-bold text-white">Florian Merzenich & Dr. Falk Heck.</span><br>
+                Wir kombinieren finanzielle Intelligenz mit unternehmerischer Exzellenz für langfristigen Wohlstand.
             </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#presse" class="bg-blue-700 text-white px-8 py-3 font-bold hover:bg-blue-600 transition duration-300 rounded shadow-[0_0_15px_rgba(29,78,216,0.5)]">
+                    Zu den Fachartikeln
+                </a>
+                <a href="#falk" class="bg-transparent border border-white text-white px-8 py-3 font-bold hover:bg-white hover:text-black transition duration-300 rounded">
+                    Mehr erfahren
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- MARQUEE STATS (Laufschrift) -->
-    <div class="bg-black border-y border-gray-800 py-6 overflow-hidden">
+    <div class="bg-black border-y border-gray-900 py-6 overflow-hidden">
         <div class="marquee-container">
-            <div class="marquee-content text-2xl md:text-3xl font-bold text-gray-300 flex items-center">
-                <span class="mx-8">5.5 Millionen Views</span> <span class="text-gray-600">•</span>
-                <span class="mx-8">608.000 Abonnenten auf Youtube</span> <span class="text-gray-600">•</span>
-                <span class="mx-8">190K Follower auf Instagram</span> <span class="text-gray-600">•</span>
-                <span class="mx-8">5.5 Millionen Views</span> <span class="text-gray-600">•</span>
-                <span class="mx-8">608.000 Abonnenten auf Youtube</span> <span class="text-gray-600">•</span>
-                <span class="mx-8">190K Follower auf Instagram</span> <span class="text-gray-600">•</span>
+            <div class="marquee-content text-xl md:text-2xl font-bold text-gray-500 flex items-center uppercase tracking-widest">
+                <span class="mx-12">Finanzielle Intelligenz</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Strategischer Vermögensaufbau</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Unternehmertum</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Lipedema World Leader</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Alternative Investments</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Finanzielle Intelligenz</span> <span class="text-blue-900">•</span>
+                <span class="mx-12">Strategischer Vermögensaufbau</span> <span class="text-blue-900">•</span>
             </div>
         </div>
     </div>
 
-    <!-- ABOUT SECTION -->
-    <section class="py-20 md:py-32 bg-black relative">
-        <!-- Background Image Parallax Effect (Simulated) -->
-        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/5df98d02-668c-48cf-8669-576455aa136d/Bens+Seite.png" class="w-full h-full object-cover grayscale">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-0"></div>
-
+    <!-- FLORIAN MERZENICH SECTION -->
+    <section id="florian" class="py-24 bg-zinc-950 relative border-b border-gray-900">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <!-- Text Content -->
                 <div class="order-2 lg:order-1">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                        {ungeskriptet} ist der Podcast ohne Schnitt.
+                    <div class="inline-block border border-blue-900/50 bg-blue-900/10 rounded-full px-4 py-1 text-sm text-blue-300 mb-6 font-medium">Partner</div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-white">
+                        Florian Merzenich
                     </h2>
+                    <h3 class="text-xl text-gray-400 mb-6 font-light">Experte für alternative Investments & Krypto-Vermögen</h3>
                     <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
                         <p>
-                            Ich bin Ben. Im Mai 2022 habe ich den {ungeskriptet} Podcast gestartet. Bereits in den ersten Wochen ist er in die Spotify Charts geschossen. Heute hören und schauen Millionen Menschen zu. "Nebenbei" führe ich mein E-Commerce Unternehmen mit 14 Mitarbeitern.
+                            Schnelles Geld ist eine Illusion. Viele träumen von finanzieller Freiheit, doch die meisten scheitern nicht am Kapital, sondern an ihrer Einstellung.
                         </p>
-                        <p>Doch mein Leben war nicht immer einfach…</p>
+                        <p>
+                            Florian Merzenich zeigt, wie du mit klaren Zielen, echtem Wissen und emotionaler Disziplin dein Vermögen strategisch aufbaust – unabhängig von Hypes und Marktgeräuschen. Sein Fokus liegt auf der Verbindung von technologischem Verständnis und ökonomischer Weitsicht.
+                        </p>
                     </div>
-                    <div class="mt-8">
-                        <a href="#" class="inline-block bg-white text-black px-8 py-3 font-bold hover:bg-gray-200 transition duration-300">
-                            Meine Geschichte
+                </div>
+                <!-- Image -->
+                <div class="order-1 lg:order-2">
+                    <div class="aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden relative group">
+                        <!-- Custom Image for Florian -->
+                        <img src="flo.webp" alt="Florian Merzenich" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out transform group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
+                            <span class="text-white font-bold text-xl block">Florian Merzenich</span>
+                            <span class="text-blue-400 text-sm">Investor & Stratege</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DR. FALK HECK SECTION -->
+    <section id="falk" class="py-24 bg-black relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image -->
+                <div class="order-1">
+                    <div class="aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden relative group">
+                        <!-- Custom Image for Dr. Falk Heck -->
+                        <img src="heck.webp" alt="Dr. Falk Heck" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out transform group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
+                            <span class="text-white font-bold text-xl block">Dr. Falk Heck</span>
+                            <span class="text-blue-400 text-sm">Unternehmer & Gründer</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text Content -->
+                <div class="order-2">
+                    <div class="inline-block border border-blue-900/50 bg-blue-900/10 rounded-full px-4 py-1 text-sm text-blue-300 mb-6 font-medium">Partner</div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-white">
+                        Dr. Falk Heck
+                    </h2>
+                    <h3 class="text-xl text-gray-400 mb-6 font-light">Unternehmer & Gründer der LipoClinic</h3>
+                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                            Von der Einzelpraxis zum Weltmarktführer: Dr. Falk Heck hat mit der <strong>LipoClinic</strong> eine beispiellose Erfolgsgeschichte geschrieben. Als Pionier in seinem Fachgebiet hat er nicht nur medizinische Standards gesetzt, sondern ein Unternehmen aufgebaut, das weltweit Patientinnen anzieht.
+                        </p>
+                        <p>
+                            Seine Expertise geht weit über die Medizin hinaus. Er steht für exzellentes Unternehmertum, erfolgreiche Skalierung und strategisches Wachstum. Er beweist, wie man Visionen in marktführende Realität verwandelt und Partnerschaften auf Augenhöhe (z.B. Private Equity) nutzt, um noch größere Ziele zu erreichen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACHARTIKEL & PRESSE SECTION (DARK ROYAL BLUE THEME) -->
+    <section id="presse" class="py-24 royal-gradient text-white border-t border-blue-900/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 drop-shadow-md">Merzenich & Heck in der Öffentlichkeit</h2>
+                <p class="text-blue-200/80 max-w-2xl mx-auto">Fachbeiträge, Interviews und Podcasts zu Finanzen, Krypto und Mindset.</p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1: Podcast -->
+                <div class="flex flex-col h-full bg-[#050b1a] border border-blue-900/30 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(30,58,138,0.3)] transition duration-300 group">
+                    <div class="h-56 overflow-hidden bg-gray-900 relative">
+                        <!-- Original Podcast Image -->
+                        <img src="https://onecdn.io/media/de533e10-e3ca-46f9-94da-878c056e2fb1/preview" alt="Podcast Mikrofon" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                        <div class="absolute top-4 right-4 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full border border-blue-400/20">Podcast</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-blue-400 font-medium mb-2 text-xs uppercase tracking-wider">Herausgeber & Host</h4>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition">Bitte ein Podcast</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                            Jetzt reinhören auf deiner Lieblings Podcast App: Apple Podcast, Spotify, YouTube.
+                        </p>
+                        <a href="https://open.spotify.com/show/0wQdprttyCTcGBghDKbWMg" target="_blank" class="inline-flex items-center text-blue-400 font-semibold hover:text-white transition">
+                            Jetzt hören <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
                         </a>
                     </div>
                 </div>
-                <!-- Image/Spacer (Grid Layout balance) -->
-                <div class="order-1 lg:order-2">
-                    <!-- Placeholder for layout balance, or we could put the image here explicitly -->
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- EPISODES SECTION -->
-    <section class="py-20 bg-black">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 border-l-4 border-white pl-4">
-                Die beliebtesten Folgen
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Episode 1: Hells Angels -->
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-900 mb-4 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/St7O8hwPpnc" title="Hells Angels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Item 2: London Daily News -->
+                <div class="flex flex-col h-full bg-[#050b1a] border border-blue-900/30 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(30,58,138,0.3)] transition duration-300 group">
+                    <div class="h-56 overflow-hidden bg-gray-900 relative">
+                        <!-- Original London Daily Image -->
+                        <img src="https://onecdn.io/media/bc3a3fa0-b1ee-466d-8236-beb23b234567/preview" alt="Finanzielle Intelligenz" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                        <div class="absolute top-4 right-4 bg-slate-800/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full border border-white/10">London Daily News</div>
                     </div>
-                    <h3 class="text-xl font-bold group-hover:text-gray-300 transition">Ex-Mitglied: Die Wahrheit über die Hells Angels</h3>
-                    <p class="text-sm text-gray-400 mt-2">Kassra Zargaran über den Absturz und die Wendung.</p>
-                </div>
-
-                <!-- Episode 2: Joana Cotar -->
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-900 mb-4 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/OO0WMWZ0Ulw" title="Joana Cotar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-blue-400 font-medium mb-2 text-xs uppercase tracking-wider">Fachbeitrag</h4>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition">Finanzielle Intelligenz: Die 4 goldenen Regeln</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                            Regeln für langfristigen Wohlstand und strategischen Vermögensaufbau.
+                        </p>
+                        <a href="https://www.londondaily.news/financial-intelligence-the-4-golden-rules-for-long-term-wealth/" target="_blank" class="inline-flex items-center text-blue-400 font-semibold hover:text-white transition">
+                            Zum Artikel <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold group-hover:text-gray-300 transition">Der Bundestag ist nur Fassade</h3>
-                    <p class="text-sm text-gray-400 mt-2">Joana Cotar enthüllt, was hinter geschlossenen Türen passiert.</p>
                 </div>
 
-                <!-- Episode 3: MathemaTrick -->
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-900 mb-4 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/juQm1WuHVmA" title="MathemaTrick" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Item 3: Deutsches Business Magazin -->
+                <div class="flex flex-col h-full bg-[#050b1a] border border-blue-900/30 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(30,58,138,0.3)] transition duration-300 group">
+                    <div class="h-56 overflow-hidden bg-gray-900 relative">
+                        <!-- Original Business Magazin Image -->
+                        <img src="https://onecdn.io/media/4bca8102-d1cb-4c1e-97b8-bb1f1a2f90ae/preview" alt="Fehler beim Vermögensaufbau" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                        <div class="absolute top-4 right-4 bg-slate-800/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full border border-white/10">Business Magazin</div>
                     </div>
-                    <h3 class="text-xl font-bold group-hover:text-gray-300 transition">YouTuberin über Freunde, Liebe & Einsamkeit</h3>
-                    <p class="text-sm text-gray-400 mt-2">Susanne von MathemaTrick im Deep-Talk.</p>
-                </div>
-
-                <!-- Episode 4: Marc Friedrich -->
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-900 mb-4 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Xl9d05rOnSw" title="Marc Friedrich" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-blue-400 font-medium mb-2 text-xs uppercase tracking-wider">Fachbeitrag</h4>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition">Die 3 größten Fehler beim Vermögensaufbau</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                            Viele träumen von finanzieller Freiheit, doch die meisten scheitern nicht am Kapital, sondern an ihrer Einstellung.
+                        </p>
+                        <a href="https://deutsches-business-magazin.de/2025/04/07/die-3-groessten-fehler-beim-vermoegensaufbau-und-wie-du-sie-vermeidest/" target="_blank" class="inline-flex items-center text-blue-400 font-semibold hover:text-white transition">
+                            Weiterlesen <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+                        </a>
                     </div>
-                    <h3 class="text-xl font-bold group-hover:text-gray-300 transition">Deutschland ist am Ende!</h3>
-                    <p class="text-sm text-gray-400 mt-2">Marc Friedrich über Finanzen, Wirtschaft und Krisen.</p>
                 </div>
 
-                <!-- Episode 5: Maxim Mankevich -->
-                <div class="group cursor-pointer">
-                    <div class="aspect-video bg-gray-900 mb-4 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/lfp5lM7LIFM" title="Maxim Mankevich" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Item 4: Gütsel Online -->
+                <div class="flex flex-col h-full bg-[#050b1a] border border-blue-900/30 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(30,58,138,0.3)] transition duration-300 group">
+                    <div class="h-56 overflow-hidden bg-gray-900 relative">
+                        <!-- Original Gütsel Image -->
+                        <img src="https://onecdn.io/media/ec8e4ef3-71ba-4a19-91a0-7820454f858b/preview" alt="Mindset" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                        <div class="absolute top-4 right-4 bg-slate-800/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full border border-white/10">Gütsel.de</div>
                     </div>
-                    <h3 class="text-xl font-bold group-hover:text-gray-300 transition">Unsichtbare Kräfte lenken dein Leben!</h3>
-                    <p class="text-sm text-gray-400 mt-2">Maxim Mankevich über Energie, Karma und Spiritualität.</p>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-blue-400 font-medium mb-2 text-xs uppercase tracking-wider">Fachbeitrag</h4>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition">Dein Kontostand folgt deinem Kopf</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                            Florian Merzenich zeigt, warum dein Denken entscheidender ist als dein Depot.
+                        </p>
+                        <a href="https://www.guetsel.de/content/104153/warum-mindset-ueber-deinen-kontostand-entscheidet-und-wie-du-es-aenderst.html" target="_blank" class="inline-flex items-center text-blue-400 font-semibold hover:text-white transition">
+                            Weiterlesen <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <!-- Item 5: Wirtschaftsforum -->
+                <div class="flex flex-col h-full bg-[#050b1a] border border-blue-900/30 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(30,58,138,0.3)] transition duration-300 group">
+                    <div class="h-56 overflow-hidden bg-gray-900 relative">
+                        <!-- Original Wirtschaftsforum Image -->
+                        <img src="https://onecdn.io/media/1f9a93d5-0288-44e5-b3e3-60e121e5f386/preview" alt="Kryptomarkt" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply"></div>
+                        <div class="absolute top-4 right-4 bg-slate-800/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full border border-white/10">Wirtschaftsforum</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-blue-400 font-medium mb-2 text-xs uppercase tracking-wider">Krypto-Markt</h4>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition">Liquidationen am Kryptomarkt</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
+                            Warum gerade jetzt große Chancen entstehen. Wenn der Markt crasht, wittern Profis keine Gefahr – sondern Chancen.
+                        </p>
+                        <a href="https://www.wirtschaftsforum.de/news/pr-profis/liquidationen-am-kryptomarkt-warum-gerade-jetzt-grosse-chancen-ents" target="_blank" class="inline-flex items-center text-blue-400 font-semibold hover:text-white transition">
+                            Weiterlesen <i class="fas fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <!-- LISTEN ON SECTION -->
-    <section class="py-20 bg-white text-black">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Höre {ungeskriptet} auf:</h2>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                <!-- YouTube Logo -->
-                <a href="#" class="block w-40 hover:scale-105 transition">
-                    <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/c5117211-e126-4843-b79c-5936012bff5e/Youtube+Logo+breit.png" alt="YouTube">
-                </a>
-                <!-- Spotify Logo -->
-                <a href="#" class="block w-40 hover:scale-105 transition">
-                    <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/3b4ef207-6594-406a-bdb7-292803ed3dd6/Spotify+Logo+breit.png" alt="Spotify">
-                </a>
-                <!-- Apple Podcast Logo -->
-                <a href="#" class="block w-40 hover:scale-105 transition">
-                    <img src="https://images.squarespace-cdn.com/content/v1/626794bf592ce56235d0a335/735b8c88-3397-4513-9686-650c67ff2b43/Apple+Podcast+Logo+breit.png" alt="Apple Podcast">
-                </a>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-100 text-black py-16 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <footer id="kontakt" class="bg-[#020410] text-gray-400 py-16 border-t border-blue-900/20">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-                <h4 class="font-bold text-lg mb-4">{ungeskriptet} hören & sehen</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-600 hover:text-black underline decoration-gray-400 hover:decoration-black transition">YouTube</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-black underline decoration-gray-400 hover:decoration-black transition">Spotify</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-black underline decoration-gray-400 hover:decoration-black transition">Apple Podcasts</a></li>
+                <h4 class="font-bold text-white text-lg mb-4">Merzenich & Heck</h4>
+                <p class="text-sm leading-relaxed mb-6 text-gray-500">
+                    Ihr Partner für finanzielle Intelligenz und strategischen Vermögensaufbau. Wir verbinden Mindset mit Marktverständnis.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-youtube text-xl"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-white text-lg mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="#florian" class="hover:text-blue-400 transition">Florian Merzenich</a></li>
+                    <li><a href="#falk" class="hover:text-blue-400 transition">Dr. Falk Heck</a></li>
+                    <li><a href="#presse" class="hover:text-blue-400 transition">Fachartikel</a></li>
+                    <li><a href="#kontakt" class="hover:text-blue-400 transition">Kontakt</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-bold text-lg mb-4">Rechtliches</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-600 hover:text-black underline decoration-gray-400 hover:decoration-black transition">Impressum</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-black underline decoration-gray-400 hover:decoration-black transition">Datenschutz</a></li>
+                <h4 class="font-bold text-white text-lg mb-4">Rechtliches</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-blue-400 transition">Impressum</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">Datenschutz</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">AGB</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-300 text-sm text-gray-500 flex justify-between">
-            <p>&copy; 2024 {ungeskriptet}</p>
-            <div class="flex space-x-4">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-tiktok"></i>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-blue-900/10 text-xs text-center text-gray-600">
+            <p>&copy; 2024 Merzenich & Heck. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
