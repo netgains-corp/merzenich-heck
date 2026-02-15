@@ -116,9 +116,10 @@
         
         <!-- YouTube Background Video Wrapper -->
         <div class="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <!-- Added &vq=hd1080 to force higher resolution preference -->
             <iframe 
                 class="absolute top-1/2 left-1/2 w-[160%] h-[160%] -translate-x-1/2 -translate-y-1/2 opacity-60"
-                src="https://www.youtube.com/embed/KeXn0glf-aU?autoplay=1&mute=1&controls=0&loop=1&playlist=KeXn0glf-aU&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1" 
+                src="https://www.youtube.com/embed/KeXn0glf-aU?autoplay=1&mute=1&controls=0&loop=1&playlist=KeXn0glf-aU&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1&vq=hd1080" 
                 title="YouTube background" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -190,8 +191,8 @@
                 <!-- Image -->
                 <div class="order-1 lg:order-2">
                     <div class="aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden relative group">
-                        <!-- Custom Image for Florian -->
-                        <img src="flo.webp" alt="Florian Merzenich" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out transform group-hover:scale-105">
+                        <!-- Custom Image for Florian - Removed grayscale classes -->
+                        <img src="flo.webp" alt="Florian Merzenich" class="w-full h-full object-cover transition duration-700 ease-in-out transform group-hover:scale-105">
                         <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
                             <span class="text-white font-bold text-xl block">Florian Merzenich</span>
                             <span class="text-blue-400 text-sm">Investor & Stratege</span>
@@ -209,8 +210,8 @@
                 <!-- Image -->
                 <div class="order-1">
                     <div class="aspect-[4/5] bg-gray-900 rounded-lg overflow-hidden relative group">
-                        <!-- Custom Image for Dr. Falk Heck -->
-                        <img src="heck.webp" alt="Dr. Falk Heck" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out transform group-hover:scale-105">
+                        <!-- Custom Image for Dr. Falk Heck - Removed grayscale classes -->
+                        <img src="heck.webp" alt="Dr. Falk Heck" class="w-full h-full object-cover transition duration-700 ease-in-out transform group-hover:scale-105">
                         <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
                             <span class="text-white font-bold text-xl block">Dr. Falk Heck</span>
                             <span class="text-blue-400 text-sm">Unternehmer & Gründer</span>
